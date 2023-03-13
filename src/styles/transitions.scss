@@ -1,0 +1,22 @@
+.opacity-transition-enter-active,
+.opacity-transition-leave-active {
+  transition:
+    opacity 0.3s ease,
+    color 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.opacity-transition-enter-from,
+.opacity-transition-leave-to {
+  opacity: 0;
+}
+
+.opacity-out-in-transition-enter-active,
+.opacity-out-in-transition-leave-active {
+  transition: opacity 0.15s;
+}
+
+.opacity-out-in-transition-enter-from,
+.opacity-out-in-transition-leave-to {
+  opacity: 0;
+}

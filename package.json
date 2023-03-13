@@ -1,0 +1,48 @@
+{
+  "name": "mike-zotov-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "run-p type-check build-only",
+    "preview": "vite preview",
+    "build-only": "vite build",
+    "type-check": "vue-tsc --noEmit",
+    "lint": "yarn run lint:eslint && yarn run lint:stylelint",
+    "lint:eslint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+    "lint:stylelint": "stylelint 'src/**/*.{scss,css,vue}' --fix",
+    "generate": "vite-ssg build"
+  },
+  "dependencies": {
+    "pinia": "^2.0.34",
+    "vue": "^3.2.47",
+    "vue-i18n": "9"
+  },
+  "devDependencies": {
+    "@rushstack/eslint-patch": "^1.2.0",
+    "@types/node": "^18.15.11",
+    "@vitejs/plugin-vue": "^4.1.0",
+    "@vue/eslint-config-standard": "^8.0.1",
+    "@vue/eslint-config-typescript": "^11.0.2",
+    "@vue/tsconfig": "^0.1.3",
+    "@vueuse/head": "^1.1.23",
+    "eslint": "^8.38.0",
+    "eslint-plugin-vue": "^9.10.0",
+    "npm-run-all": "^4.1.5",
+    "postcss-html": "^1.5.0",
+    "sass": "^1.61.0",
+    "stylelint": "^15.3.0",
+    "stylelint-config-recommended-vue": "^1.4.0",
+    "stylelint-config-standard": "^32.0.0",
+    "stylelint-config-standard-scss": "^8.0.0",
+    "typescript": "~4.9.5",
+    "vite": "^4.2.1",
+    "vite-plugin-svg-icons": "^2.0.1",
+    "vite-ssg": "^0.22.2",
+    "vite-ssg-sitemap": "^0.4.3",
+    "vue-router": "^4.1.6",
+    "vue-tsc": "^1.2.0"
+  }
+}

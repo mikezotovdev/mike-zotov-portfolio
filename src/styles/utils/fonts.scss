@@ -1,0 +1,70 @@
+$font-weight-regular: 400 !default;
+$font-weight-medium: 500 !default;
+$font-weight-semibold: 600 !default;
+
+$text-xl: (
+  font-size: 70px,
+  line-height: 70px,
+  font-weight: $font-weight-regular
+);
+
+$text-page-title-medium: (
+  font-size: 80px,
+  line-height: 100px,
+  font-weight: $font-weight-regular
+);
+
+$text-page-title-medium-mobile: (
+  font-size: 64px,
+  line-height: 72px,
+  font-weight: $font-weight-regular
+);
+
+$text-h1: (
+  font-size: 48px,
+  line-height: 60px,
+  font-weight: $font-weight-regular
+);
+
+$text-h2: (
+  font-size: 40px,
+  line-height: 50px,
+  font-weight: $font-weight-regular
+);
+
+$text-h3: (
+  font-size: 32px,
+  line-height: 34px,
+  font-weight: $font-weight-regular
+);
+
+$text-h4: (
+  font-size: 24px,
+  line-height: 36px,
+  font-weight: $font-weight-regular
+);
+
+$text-paragraph: (
+  font-size: 18px,
+  line-height: 27px,
+  font-weight: $font-weight-regular
+);
+
+$text-small: (
+  font-size: 16px,
+  line-height: 24px,
+  font-weight: $font-weight-regular
+);
+
+$text-tiny: (
+  font-size: 14px,
+  line-height: 21px,
+  font-weight: $font-weight-regular
+);
+
+$text-caption: (
+  font-size: 14px,
+  line-height: 21px,
+  font-weight: $font-weight-regular,
+  color: var(--font-description)
+);

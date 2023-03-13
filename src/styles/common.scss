@@ -1,0 +1,76 @@
+@use './utils/functions.scss' as fun;
+@use './utils/mixins.scss' as mixins;
+
+html {
+  box-sizing: border-box;
+
+  &.is-locked {
+    overflow: hidden;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+blockquote {
+  margin: 0;
+}
+
+svg, img {
+  display: block;
+}
+
+address {
+  @include mixins.font-inherit;
+}
+
+ul,
+li,
+dl {
+  list-style-position: inside;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus-color);
+  outline-offset: 1px;
+  border-radius: 4px;
+}
+
+.button {
+  display: inline-flex;
+  background-color: transparent;
+  border: none;
+  color: var(--font-color);
+  padding: fun.space(2) fun.space(3);
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition-duration: 0.2s;
+  transition-property: transform;
+  @include mixins.font-inherit;
+
+  &:focus-visible {
+    outline: 2px solid var(--focus-color);
+    outline-offset: 1px;
+  }
+
+  &:active {
+    transform: scale(0.97);
+  }
+
+  &.is-icon {
+    padding: 0;
+    border-radius: 50%;
+
+    .app-svg-icon {
+      fill: var(--font-color);
+    }
+  }
+
+  &.is-fold {
+    padding: 0;
+  }
+}

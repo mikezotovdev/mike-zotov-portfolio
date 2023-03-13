@@ -1,0 +1,99 @@
+@use './fonts.scss' as fonts;
+@use './variables.scss' as var;
+@use './functions.scss' as fun;
+
+@mixin apply-styles($styles) {
+  @each $prop, $value in $styles {
+    #{$prop}: $value;
+  }
+}
+
+// responsive
+@mixin tablet {
+  @media screen and (max-width: var.$medium-screen - 1px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: var.$small-screen - 1px) {
+    @content;
+  }
+}
+
+// texts
+@mixin font-inherit {
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+}
+
+@mixin text-xl {
+  @include apply-styles(fonts.$text-xl);
+}
+
+@mixin text-h1-extended-medium {
+  @include apply-styles(fonts.$text-page-title-medium);
+
+  @include mobile {
+    @include apply-styles(fonts.$text-page-title-medium-mobile);
+  }
+}
+
+@mixin text-h1 {
+  @include apply-styles(fonts.$text-h1);
+
+  @include mobile {
+    @include apply-styles(fonts.$text-h2);
+  }
+}
+
+@mixin text-h2 {
+  @include apply-styles(fonts.$text-h2);
+
+  @include mobile {
+    @include apply-styles(fonts.$text-h3);
+  }
+}
+
+@mixin text-h3 {
+  @include apply-styles(fonts.$text-h3);
+}
+
+@mixin text-h4 {
+  @include apply-styles(fonts.$text-h4);
+}
+
+@mixin text-paragraph {
+  @include apply-styles(fonts.$text-paragraph);
+}
+
+@mixin text-small {
+  @include apply-styles(fonts.$text-small);
+}
+
+@mixin text-tiny {
+  @include apply-styles(fonts.$text-tiny);
+}
+
+@mixin text-caption {
+  @include apply-styles(fonts.$text-caption);
+}
+
+@mixin text-underline {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: fun.space(2);
+}
+
+@mixin text-no-underline-on-hover {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+// extra styles
+@mixin shadow() {
+  box-shadow: 0 4px 40px rgb(0 0 0 / 9%);
+}

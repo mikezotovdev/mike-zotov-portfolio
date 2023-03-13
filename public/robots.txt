@@ -1,0 +1,10 @@
+User-agent: *
+Disallow:
+Allow: /
+Allow: /assets/*
+Allow: /sharing/*
+Disallow: /?*
+Disallow: /ru/?*
+Host: https://mikezotov.dev
+Crawl-delay: 2
+Sitemap: https://mikezotov.dev/sitemap.xml

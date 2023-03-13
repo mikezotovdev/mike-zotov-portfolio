@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!--about-->
+    <meta name="application-name" content="Mike Zotov - front-end developer">
+    <meta name="theme-color" content="#00a651">
+    <meta name="msapplication-TileColor" content="#00a651">
+    <meta name="description"
+          content="The portfolio of a senior front-end developer Mike Zotov. Vue.js (2/3), and JavaScript (TS) expert with computer science background.">
+    <!--bots-->
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <!--open graph-->
+    <meta property="og:locale" content="en-US">
+    <meta property="og:site_name" content="Mike Zotov - front-end developer">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mikezotov.dev">
+    <meta property="og:title" content="Mike Zotov - Senior Front-end Developer">
+    <meta property="og:description" content="The portfolio of a senior front-end developer Mike Zotov. Vue.js (2/3), and JavaScript (TS) expert with computer science background.">
+    <meta property="og:image" content="https://mikezotov.dev/sharing/home/about.jpg">
+    <meta property="og:image:width" content="1200px">
+    <meta property="og:image:height" content="627px">
+    <!--twitter-->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:creator" content="@mikezotovdev">
+    <meta name="twitter:title" content="Mike Zotov - Senior Front-end Developer">
+    <meta name="twitter:description" content="The portfolio of a senior front-end developer Mike Zotov. Vue.js (2/3), and JavaScript (TS) expert with computer science background.">
+    <meta name="twitter:image" content="https://mikezotov.dev/sharing/home/about.jpg">
+
+    <title>Mike Zotov - Senior Front-end Developer</title>
+
+    <!--links-->
+    <link rel="manifest" href="/manifest.json">
+    <link rel="author" href="mikezotovdev@gmail.com">
+    <!--icons-->
+    <link rel="icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="192x192" href="/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+    <link rel="mask-icon" href="/safari-pinned-tab.png" color="#00a651">
+
+    <script>
+    (function () {
+      const schemes = {
+        dark: 'dark',
+        light: 'light',
+        system: 'system'
+      }
+
+      const setSchemeClass = (colorScheme) => {
+        document.documentElement.classList.add(`is-${colorScheme}`)
+      }
+
+      const savedColorScheme = localStorage.getItem('COLOR_SCHEME')
+      const isValidColorScheme = Boolean(schemes[savedColorScheme])
+
+      if (isValidColorScheme) {
+        setSchemeClass(savedColorScheme)
+
+        return
+      }
+
+      const isDarkSchemePreferred = window.matchMedia('(prefers-color-scheme:dark)').matches
+
+      if (isDarkSchemePreferred) {
+        setSchemeClass(schemes.dark)
+      }
+    }())
+    </script>
+    <style>
+        /* prevent UI blinking when the app CSS is not loaded yet */
+        html.is-dark {
+            color: #ffffff;
+            background-color: #121212;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            html.is-system {
+                color: #ffffff;
+                background-color: #121212;
+            }
+        }
+    </style>
+</head>
+<body>
+<noscript>
+    <p>Enable JavaScript to view the website.</p>
+</noscript>
+<div id="app"></div>
+<script type="module" src="/src/main.ts"></script>
+</body>
+</html>

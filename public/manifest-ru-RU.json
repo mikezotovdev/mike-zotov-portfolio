@@ -1,0 +1,40 @@
+{
+  "name": "Миша Зотов | Портфолио",
+  "lang": "ru-RU",
+  "short_name": "Миша Зотов",
+  "theme_color": "#00a651",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "/",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Обо мне",
+      "url": "/ru/",
+      "description": "Обо мне"
+    },
+    {
+      "name": "Проекты",
+      "url": "/ru/proekty/",
+      "description": "Проекты на Vue.js"
+    },
+    {
+      "name": "Контакты",
+      "url": "/ru/kontakty/",
+      "description": "Мои контакты"
+    }
+  ]
+}

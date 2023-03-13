@@ -1,0 +1,61 @@
+:root {
+  --font-color: #030303;
+  --font-description: #454545;
+  --font-color-alternative: #ffffff;
+  --font-link: #454545;
+
+  --focus-color: #0085f2;
+
+  --color-white: #ffffff;
+
+  --color-gray: #cccccc;
+  --color-gray-alpha: #cccccc55;
+  --color-gray-light: #eeeeee;
+
+  --color-yellow: #ffde03;
+  --color-red: #ed1c24;
+  --color-blue: #007ae0;
+  --color-green: #00a651;
+
+  --color-blue-light: #bfd6ea;
+  --color-green-light: #bfe9d3;
+
+  --app-background: #ffffff;
+}
+
+@mixin dark-colors {
+  --font-color: #ffffff;
+  --font-description: #cccccc;
+  --font-color-alternative: #030303;
+  --font-link: #c6c6c6;
+
+  --focus-color: #5e9eff;
+
+  --color-white: #030303;
+
+  --color-gray: #454545;
+  --color-gray-alpha: #45454555;
+  --color-gray-light: #696969;
+
+  --color-yellow: #6e6215;
+  --color-red: #8e161a;
+  --color-blue: #17568a;
+  --color-green: #055a2e;
+
+  --color-green-light: #0e3822;
+  --color-blue-light: #0e2539;
+
+  --app-background: #121212;
+}
+
+html {
+  &.is-dark {
+    @include dark-colors;
+  }
+
+  &.is-system {
+    @media (prefers-color-scheme: dark) {
+      @include dark-colors;
+    }
+  }
+}

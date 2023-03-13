@@ -1,0 +1,41 @@
+{
+  "extends": [
+    "stylelint-config-standard-scss",
+    "stylelint-config-recommended-vue/scss"
+  ],
+  "rules": {
+    "no-descending-specificity": null,
+    "at-rule-empty-line-before": null,
+    "custom-property-empty-line-before": null,
+    "declaration-empty-line-before": null,
+    "value-keyword-case": null,
+    "color-hex-length": "long",
+    "declaration-block-single-line-max-declarations": 0,
+    "max-nesting-depth": 3,
+    "selector-max-compound-selectors": 4,
+    "selector-class-pattern": null,
+    "media-feature-name-no-unknown": true,
+    "rule-empty-line-before": [
+      "always",
+      {
+        "except": [
+          "after-single-line-comment",
+          "first-nested"
+        ]
+      }
+    ],
+    "no-duplicate-selectors": null,
+    "indentation": [2, { "baseIndentLevel": 1 }],
+
+    "scss/dollar-variable-colon-space-after": [
+      "always-single-line"
+    ],
+    "scss/at-function-pattern": null,
+    "scss/at-mixin-pattern": null,
+    "scss/dollar-variable-pattern": null,
+    "scss/percent-placeholder-pattern": null,
+    "scss/at-mixin-argumentless-call-parentheses": "never",
+    "scss/no-duplicate-dollar-variables": true,
+    "scss/dollar-variable-empty-line-before": null
+  }
+}

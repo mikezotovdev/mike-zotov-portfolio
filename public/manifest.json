@@ -1,0 +1,40 @@
+{
+  "name": "Mike Zotov | Portfolio",
+  "lang": "en-US",
+  "short_name": "Mike Zotov",
+  "theme_color": "#00a651",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "/",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "About",
+      "url": "/",
+      "description": "About me"
+    },
+    {
+      "name": "Projects",
+      "url": "/projects/",
+      "description": "Vue.js projects"
+    },
+    {
+      "name": "Contacts",
+      "url": "/contacts/",
+      "description": "My contacts"
+    }
+  ]
+}
